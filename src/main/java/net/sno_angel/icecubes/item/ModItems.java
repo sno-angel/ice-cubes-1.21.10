@@ -6,8 +6,6 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.equipment.ArmorMaterials;
-import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -29,11 +27,8 @@ public class ModItems implements ModInitializer {
     public static final Item AGED_PRISMARINE_SHARD = register("aged_prismarine_shard", Item::new, new Item.Settings());
     public static final Item AGED_PRISMARINE_PLATE = register("aged_prismarine_plate", Item::new, new Item.Settings());
 
-    // Super Chestplates
-    public static final Item STELLAR_NETHERITE_CHESTPLATE = register("stellar_netherite_chestplate", Item::new,
-            new Item.Settings().armor(ArmorMaterials.NETHERITE, EquipmentType.CHESTPLATE)
-                    .maxDamage(EquipmentType.CHESTPLATE.getMaxDamage(ArmorMaterials.NETHERITE.durability()))
-    );
+    // Upgraded Chestplates
+    public static final Item STELLAR_NETHERITE_CHESTPLATE = register("stellar_netherite_chestplate", StellarNetheriteChestplate::new, StellarNetheriteChestplate.getSettings());
 
 
 

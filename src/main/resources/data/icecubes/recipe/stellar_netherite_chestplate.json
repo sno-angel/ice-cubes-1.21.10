@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "minecraft:netherite_chestplate",
+    "minecraft:nether_star"
+  ],
+  "result": {
+    "id": "icecubes:stellar_netherite_chestplate",
+    "count": 1
+  }
+}
