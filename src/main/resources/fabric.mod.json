@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "icecubes",
+	"version": "${version}",
+	"name": "Ice Cubes",
+	"description": "There should be a description here.",
+	"authors": [
+		"sno_angel"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/icecubes/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.sno_angel.icecubes.IceCubes"
+		],
+		"fabric-datagen": [
+			"net.sno_angel.icecubes.IceCubesDataGenerator"
+		],
+      "client": [
+            "net.sno_angel.icecubes.IceCubesClient"
+      ]
+	},
+	"mixins": [
+		"icecubes.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.3",
+		"minecraft": "~1.21.10",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
