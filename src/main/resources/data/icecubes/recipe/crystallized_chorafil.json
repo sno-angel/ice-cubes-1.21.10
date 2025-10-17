@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "icecubes:raw_chorafil",
+    "icecubes:raw_chorafil",
+    "icecubes:raw_chorafil",
+    "icecubes:raw_chorafil",
+    "minecraft:amethyst_shard",
+    "minecraft:amethyst_shard",
+    "minecraft:amethyst_shard",
+    "minecraft:amethyst_shard"
+  ],
+  "result": {
+    "id": "icecubes:crystallized_chorafil",
+    "count": 1
+  }
+}

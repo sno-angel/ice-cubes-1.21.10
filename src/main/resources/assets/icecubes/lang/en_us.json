@@ -1,4 +1,9 @@
 {
   "item.icecubes.raw_chorafil": "Raw Chorafil",
+  "item.icecubes.crystallized_chorafil": "Crystallized Chorafil",
+  "item.icecubes.aged_prismarine_shard": "Aged Prismarine Shard",
+  "item.icecubes.aged_prismarine_plate": "Aged Prismarine Plate",
+  "item.icecubes.stellar_netherite_chestplate": "Stellar Netherite Chestplate",
+
   "itemGroup.icecubes": "Ice Cubes"
 }
