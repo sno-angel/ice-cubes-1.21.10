@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -13,22 +14,42 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.sno_angel.icecubes.IceCubes;
+import net.sno_angel.icecubes.item.armor.ChorafilArmorMaterial;
+import net.sno_angel.icecubes.item.armor.OceanicAgedPrismarineChestplate;
+import net.sno_angel.icecubes.item.armor.StellarNetheriteChestplate;
 
 import java.util.function.Function;
 
 public class ModItems implements ModInitializer {
 
     // Item registries begin here
-    // Chorafil
-    public static final Item RAW_CHORAFIL = register("raw_chorafil", Item::new, new Item.Settings());
-    public static final Item CRYSTALLIZED_CHORAFIL = register("crystallized_chorafil", Item::new, new Item.Settings());
-
     // Aged Prismarine
     public static final Item AGED_PRISMARINE_SHARD = register("aged_prismarine_shard", Item::new, new Item.Settings());
     public static final Item AGED_PRISMARINE_PLATE = register("aged_prismarine_plate", Item::new, new Item.Settings());
+    public static final Item AGED_PRISMARINE_HELMET = register("aged_prismarine_helmet", Item::new, new Item.Settings().armor(ChorafilArmorMaterial.ARMOR_MATERIAL, EquipmentType.HELMET)
+            .maxDamage(EquipmentType.HELMET.getMaxDamage(ChorafilArmorMaterial.BASE_DURABILITY)));
+    public static final Item AGED_PRISMARINE_CHESTPLATE = register("aged_prismarine_chestplate", Item::new, new Item.Settings().armor(ChorafilArmorMaterial.ARMOR_MATERIAL, EquipmentType.CHESTPLATE)
+            .maxDamage(EquipmentType.CHESTPLATE.getMaxDamage(ChorafilArmorMaterial.BASE_DURABILITY)));
+    public static final Item AGED_PRISMARINE_LEGGINGS = register("aged_prismarine_leggings", Item::new, new Item.Settings().armor(ChorafilArmorMaterial.ARMOR_MATERIAL, EquipmentType.LEGGINGS)
+            .maxDamage(EquipmentType.LEGGINGS.getMaxDamage(ChorafilArmorMaterial.BASE_DURABILITY)));
+    public static final Item AGED_PRISMARINE_BOOTS = register("aged_prismarine_boots", Item::new, new Item.Settings().armor(ChorafilArmorMaterial.ARMOR_MATERIAL, EquipmentType.BOOTS)
+            .maxDamage(EquipmentType.BOOTS.getMaxDamage(ChorafilArmorMaterial.BASE_DURABILITY)));
+
+    // Chorafil
+    public static final Item RAW_CHORAFIL = register("raw_chorafil", Item::new, new Item.Settings());
+    public static final Item CRYSTALLIZED_CHORAFIL = register("crystallized_chorafil", Item::new, new Item.Settings());
+    public static final Item CHORAFIL_HELMET = register("chorafil_helmet", Item::new, new Item.Settings().armor(ChorafilArmorMaterial.ARMOR_MATERIAL, EquipmentType.HELMET)
+            .maxDamage(EquipmentType.HELMET.getMaxDamage(ChorafilArmorMaterial.BASE_DURABILITY)));
+    public static final Item CHORAFIL_CHESTPLATE = register("chorafil_chestplate", Item::new, new Item.Settings().armor(ChorafilArmorMaterial.ARMOR_MATERIAL, EquipmentType.CHESTPLATE)
+            .maxDamage(EquipmentType.CHESTPLATE.getMaxDamage(ChorafilArmorMaterial.BASE_DURABILITY)));
+    public static final Item CHORAFIL_LEGGINGS = register("chorafil_leggings", Item::new, new Item.Settings().armor(ChorafilArmorMaterial.ARMOR_MATERIAL, EquipmentType.LEGGINGS)
+            .maxDamage(EquipmentType.LEGGINGS.getMaxDamage(ChorafilArmorMaterial.BASE_DURABILITY)));
+    public static final Item CHORAFIL_BOOTS = register("chorafil_boots", Item::new, new Item.Settings().armor(ChorafilArmorMaterial.ARMOR_MATERIAL, EquipmentType.BOOTS)
+            .maxDamage(EquipmentType.BOOTS.getMaxDamage(ChorafilArmorMaterial.BASE_DURABILITY)));
 
     // Upgraded Chestplates
     public static final Item STELLAR_NETHERITE_CHESTPLATE = register("stellar_netherite_chestplate", StellarNetheriteChestplate::new, StellarNetheriteChestplate.getSettings());
+    public static final Item OCEANIC_AGED_PRISMARINE_CHESTPLATE = register("oceanic_aged_prismarine_chestplate", OceanicAgedPrismarineChestplate::new, OceanicAgedPrismarineChestplate.getSettings());
 
 
 
@@ -58,10 +79,19 @@ public class ModItems implements ModInitializer {
 
     // Register items to the custom item group.
         ItemGroupEvents.modifyEntriesEvent(CUSTOM_ITEM_GROUP_KEY).register(itemGroup -> {
-            itemGroup.add(ModItems.RAW_CHORAFIL);
-            itemGroup.add(ModItems.CRYSTALLIZED_CHORAFIL);
             itemGroup.add(ModItems.AGED_PRISMARINE_SHARD);
             itemGroup.add(ModItems.AGED_PRISMARINE_PLATE);
+            itemGroup.add(ModItems.AGED_PRISMARINE_HELMET);
+            itemGroup.add(ModItems.AGED_PRISMARINE_CHESTPLATE);
+            itemGroup.add(ModItems.AGED_PRISMARINE_LEGGINGS);
+            itemGroup.add(ModItems.AGED_PRISMARINE_BOOTS);
+            itemGroup.add(ModItems.RAW_CHORAFIL);
+            itemGroup.add(ModItems.CRYSTALLIZED_CHORAFIL);
+            itemGroup.add(ModItems.CHORAFIL_HELMET);
+            itemGroup.add(ModItems.CHORAFIL_CHESTPLATE);
+            itemGroup.add(ModItems.CHORAFIL_LEGGINGS);
+            itemGroup.add(ModItems.CHORAFIL_BOOTS);
+            itemGroup.add(ModItems.OCEANIC_AGED_PRISMARINE_CHESTPLATE);
             itemGroup.add(ModItems.STELLAR_NETHERITE_CHESTPLATE);
         });
     }
