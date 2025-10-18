@@ -45,20 +45,19 @@ public class OceanicAgedPrismarineChestplate extends Item {
         if(slot == EquipmentSlot.CHEST) {
             if(entity.isTouchingWaterOrRain()) {
                 ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.CONDUIT_POWER,
-                        120, 1, false, false, true));
+                        40, 1, false, false, true));
                 if(!effectActive) {
                     world.playSound(null, entity.getBlockPos(), SoundEvents.BLOCK_CONDUIT_ACTIVATE, SoundCategory.PLAYERS);
                     effectActive = true;
                 }
             }
-        }
-        if(effectActive) {
-            world.spawnParticles(ParticleTypes.NAUTILUS, entity.getX(), entity.getY()+1, entity.getZ(),
-                    1, 0.25d, 0.25d, 0.25d, 0);
-            if((!((LivingEntity)entity).hasStatusEffect(StatusEffects.CONDUIT_POWER) ||
-                    slot != EquipmentSlot.CHEST)) {
-                world.playSound(null, entity.getBlockPos(), SoundEvents.BLOCK_CONDUIT_DEACTIVATE, SoundCategory.PLAYERS);
-                effectActive = false;
+            if(effectActive) {
+                world.spawnParticles(ParticleTypes.NAUTILUS, entity.getX(), entity.getY()+1, entity.getZ(),
+                        1, 0.25d, 0.25d, 0.25d, 0);
+                if((!((LivingEntity)entity).hasStatusEffect(StatusEffects.CONDUIT_POWER))) {
+                    world.playSound(null, entity.getBlockPos(), SoundEvents.BLOCK_CONDUIT_DEACTIVATE, SoundCategory.PLAYERS);
+                    effectActive = false;
+                }
             }
         }
     }

@@ -63,16 +63,15 @@ public class StellarNetheriteChestplate extends Item {
                 }
                 entity.extinguish();
             }
-        }
-        if(effectActive) {
-            world.spawnParticles(ParticleTypes.SMOKE, entity.getX(), entity.getY()+1, entity.getZ(),
-                    4, 0.25d, 0.25d, 0.25d, 0);
-            if((!((LivingEntity)entity).hasStatusEffect(StatusEffects.SPEED) ||
-                    !((LivingEntity)entity).hasStatusEffect(StatusEffects.REGENERATION) ||
-                    !((LivingEntity)entity).hasStatusEffect(StatusEffects.FIRE_RESISTANCE) ||
-                    slot != EquipmentSlot.CHEST)) {
-                world.playSound(null, entity.getBlockPos(), SoundEvents.BLOCK_BEACON_DEACTIVATE, SoundCategory.PLAYERS);
-                effectActive = false;
+            if(effectActive) {
+                world.spawnParticles(ParticleTypes.SMOKE, entity.getX(), entity.getY()+1, entity.getZ(),
+                        4, 0.25d, 0.25d, 0.25d, 0);
+                if((!((LivingEntity)entity).hasStatusEffect(StatusEffects.SPEED) ||
+                        !((LivingEntity)entity).hasStatusEffect(StatusEffects.REGENERATION) ||
+                        !((LivingEntity)entity).hasStatusEffect(StatusEffects.FIRE_RESISTANCE))) {
+                    world.playSound(null, entity.getBlockPos(), SoundEvents.BLOCK_BEACON_DEACTIVATE, SoundCategory.PLAYERS);
+                    effectActive = false;
+                }
             }
         }
     }
