@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S#",
+    "#X#",
+    "###"
+  ],
+  "key": {
+    "#": "minecraft:diamond",
+    "S": "icecubes:aged_prismarine_upgrade_smithing_template",
+    "X": "minecraft:clay"
+  },
+  "result": {
+    "id": "icecubes:aged_prismarine_upgrade_smithing_template",
+    "count": 2
+  }
+}

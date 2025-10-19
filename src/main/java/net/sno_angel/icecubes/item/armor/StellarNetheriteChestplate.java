@@ -48,11 +48,11 @@ public class StellarNetheriteChestplate extends Item {
         if(slot == EquipmentSlot.CHEST) {
             if(entity.isOnFire()) {
                 ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED,
-                        60, 2, false, false, true));
-                ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION,
-                        60, 2, false, false, true));
-                ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE,
                         60, 1, false, false, true));
+                ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION,
+                        60, 1, false, false, true));
+                ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE,
+                        60, 0, false, false, true));
                 if(!effectActive) {
                     world.playSound(null, entity.getBlockPos(), SoundEvents.BLOCK_BEACON_ACTIVATE, SoundCategory.PLAYERS);
                     world.spawnParticles(ParticleTypes.FLAME, entity.getX(), entity.getY()+1, entity.getZ(),

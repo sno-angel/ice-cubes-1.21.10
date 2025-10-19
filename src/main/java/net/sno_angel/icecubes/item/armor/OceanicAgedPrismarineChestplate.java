@@ -45,7 +45,9 @@ public class OceanicAgedPrismarineChestplate extends Item {
         if(slot == EquipmentSlot.CHEST) {
             if(entity.isTouchingWaterOrRain()) {
                 ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.CONDUIT_POWER,
-                        40, 1, false, false, true));
+                        40, 0, false, false, true));
+                ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE,
+                        40, 0, false, false, true));
                 if(!effectActive) {
                     world.playSound(null, entity.getBlockPos(), SoundEvents.BLOCK_CONDUIT_ACTIVATE, SoundCategory.PLAYERS);
                     effectActive = true;
