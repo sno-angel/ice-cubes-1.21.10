@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "icecubes:chorafil_upgrade_smithing_template",
+  "base": "minecraft:chainmail_chestplate",
+  "addition": "icecubes:crystallized_chorafil",
+  "result": {
+    "id": "icecubes:chorafil_chestplate"
+  }
+}

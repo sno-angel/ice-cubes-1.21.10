@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "icecubes:aged_prismarine_upgrade_smithing_template",
+  "base": "minecraft:leather_chestplate",
+  "addition": "icecubes:aged_prismarine_plate",
+  "result": {
+    "id": "icecubes:aged_prismarine_chestplate"
+  }
+}

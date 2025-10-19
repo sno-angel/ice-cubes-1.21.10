@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "icecubes:chorafil_chestplate",
+    "minecraft:elytra"
+  ],
+  "result": {
+    "id": "icecubes:winged_chorafil_chestplate",
+    "count": 1
+  }
+}

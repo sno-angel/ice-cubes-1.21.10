@@ -74,6 +74,10 @@ public class StellarNetheriteChestplate extends Item {
                 }
             }
         }
+        if(effectActive && slot != EquipmentSlot.CHEST) {
+            effectActive = false;
+            world.playSound(null, entity.getBlockPos(), SoundEvents.BLOCK_CONDUIT_DEACTIVATE, SoundCategory.PLAYERS);
+        }
     }
 
     @Override

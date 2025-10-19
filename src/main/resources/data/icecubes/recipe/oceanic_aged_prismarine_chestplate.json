@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "icecubes:aged_prismarine_chestplate",
+    "minecraft:heart_of_the_sea"
+  ],
+  "result": {
+    "id": "icecubes:oceanic_aged_prismarine_chestplate",
+    "count": 1
+  }
+}

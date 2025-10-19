@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.SmithingTemplateItem;
 import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -13,10 +14,9 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 import net.sno_angel.icecubes.IceCubes;
-import net.sno_angel.icecubes.item.armor.ChorafilArmorMaterial;
-import net.sno_angel.icecubes.item.armor.OceanicAgedPrismarineChestplate;
-import net.sno_angel.icecubes.item.armor.StellarNetheriteChestplate;
+import net.sno_angel.icecubes.item.armor.*;
 
 import java.util.function.Function;
 
@@ -48,9 +48,18 @@ public class ModItems implements ModInitializer {
             .maxDamage(EquipmentType.BOOTS.getMaxDamage(ChorafilArmorMaterial.BASE_DURABILITY)));
 
     // Upgraded Chestplates
-    public static final Item STELLAR_NETHERITE_CHESTPLATE = register("stellar_netherite_chestplate", StellarNetheriteChestplate::new, StellarNetheriteChestplate.getSettings());
-    public static final Item OCEANIC_AGED_PRISMARINE_CHESTPLATE = register("oceanic_aged_prismarine_chestplate", OceanicAgedPrismarineChestplate::new, OceanicAgedPrismarineChestplate.getSettings());
+    public static final Item OCEANIC_AGED_PRISMARINE_CHESTPLATE = register("oceanic_aged_prismarine_chestplate",
+            OceanicAgedPrismarineChestplate::new, OceanicAgedPrismarineChestplate.getSettings());
+    public static final Item WINGED_CHORAFIL_CHESTPLATE = register("winged_chorafil_chestplate",
+            WingedChorafilChestplate::new, WingedChorafilChestplate.getSettings());
+    public static final Item STELLAR_NETHERITE_CHESTPLATE = register("stellar_netherite_chestplate",
+            StellarNetheriteChestplate::new, StellarNetheriteChestplate.getSettings());
 
+    // Smithing Templates
+    public static final SmithingTemplateItem CHORAFIL_UPGRADE_SMITHING_TEMPLATE = (SmithingTemplateItem) register(
+            "chorafil_upgrade_smithing_template", ChorafilArmorMaterial::createChorafilUpgrade, new Item.Settings().rarity(Rarity.UNCOMMON));
+    public static final SmithingTemplateItem AGED_PRISMARINE_UPGRADE_SMITHING_TEMPLATE = (SmithingTemplateItem) register(
+            "aged_prismarine_upgrade_smithing_template", AgedPrismarineArmorMaterial::createAgedPrismarineUpgrade, new Item.Settings().rarity(Rarity.UNCOMMON));
 
 
     // Don't touch this
@@ -92,7 +101,10 @@ public class ModItems implements ModInitializer {
             itemGroup.add(ModItems.CHORAFIL_LEGGINGS);
             itemGroup.add(ModItems.CHORAFIL_BOOTS);
             itemGroup.add(ModItems.OCEANIC_AGED_PRISMARINE_CHESTPLATE);
+            itemGroup.add(ModItems.WINGED_CHORAFIL_CHESTPLATE);
             itemGroup.add(ModItems.STELLAR_NETHERITE_CHESTPLATE);
+            itemGroup.add(ModItems.AGED_PRISMARINE_UPGRADE_SMITHING_TEMPLATE);
+            itemGroup.add(ModItems.CHORAFIL_UPGRADE_SMITHING_TEMPLATE);
         });
     }
 

@@ -17,8 +17,21 @@
   "item.icecubes.stellar_netherite_chestplate": "Stellar Netherite Chestplate",
   "item.icecubes.oceanic_aged_prismarine_chestplate": "Oceanic Aged Prismarine Chestplate",
   "item.icecubes.winged_chorafil_chestplate": "Winged Chorafil Chestplate",
+  "item.icecubes.aged_prismarine_upgrade_smithing_template": "Aged Prismarine Upgrade",
+  "item.icecubes.chorafil_upgrade_smithing_template": "Chorafil Upgrade",
+
 
   "itemTooltip.icecubes.stellar_netherite_chestplate": "Turn fire into speed and health.",
   "itemTooltip.icecubes.oceanic_aged_prismarine_chestplate": "Claim a conduit's power.",
-  "itemTooltip.icecubes.winged_chorafil_chestplate": "Achieve flight."
+  "itemTooltip.icecubes.winged_chorafil_chestplate": "Achieve flight.",
+
+  "item.minecraft.smithing_template.chorafil_upgrade.applies_to": "Chainmail Armor, Bow",
+  "item.minecraft.smithing_template.chorafil_upgrade.ingredients": "Crystallized Chorafil",
+  "item.minecraft.smithing_template.chorafil_upgrade.base_slot_description": "Add chainmail armor or bow",
+  "item.minecraft.smithing_template.chorafil_upgrade.additions_slot_description": "Add Crystallized Chorafil",
+
+  "item.minecraft.smithing_template.aged_prismarine_upgrade.applies_to": "Leather Armor, Trident",
+  "item.minecraft.smithing_template.aged_prismarine_upgrade.ingredients": "Aged Prismarine Plate",
+  "item.minecraft.smithing_template.aged_prismarine_upgrade.base_slot_description": "Add leather armor or trident",
+  "item.minecraft.smithing_template.aged_prismarine_upgrade.additions_slot_description": "Add Aged Prismarine Plate"
 }
