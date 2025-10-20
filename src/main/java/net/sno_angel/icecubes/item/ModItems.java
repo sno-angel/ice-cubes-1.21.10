@@ -17,6 +17,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.sno_angel.icecubes.IceCubes;
 import net.sno_angel.icecubes.item.armor.*;
+import net.sno_angel.icecubes.item.food.BlazePepper;
 
 import java.util.function.Function;
 
@@ -60,6 +61,11 @@ public class ModItems implements ModInitializer {
             "chorafil_upgrade_smithing_template", ChorafilArmorMaterial::createChorafilUpgrade, new Item.Settings().rarity(Rarity.UNCOMMON));
     public static final SmithingTemplateItem AGED_PRISMARINE_UPGRADE_SMITHING_TEMPLATE = (SmithingTemplateItem) register(
             "aged_prismarine_upgrade_smithing_template", AgedPrismarineArmorMaterial::createAgedPrismarineUpgrade, new Item.Settings().rarity(Rarity.UNCOMMON));
+
+    //  Blaze Pepper
+    public static final Item BLAZE_PEPPER = register("blaze_pepper", BlazePepper::new, BlazePepper.getSettings());
+    public static final Item BLAZE_PEPPER_CORE = register("blaze_pepper_core", Item::new, new Item.Settings());
+    public static final Item PEPPER_POWDER = register("pepper_powder", Item::new, new Item.Settings());
 
 
     // Don't touch this
@@ -105,6 +111,9 @@ public class ModItems implements ModInitializer {
             itemGroup.add(ModItems.STELLAR_NETHERITE_CHESTPLATE);
             itemGroup.add(ModItems.AGED_PRISMARINE_UPGRADE_SMITHING_TEMPLATE);
             itemGroup.add(ModItems.CHORAFIL_UPGRADE_SMITHING_TEMPLATE);
+            itemGroup.add(ModItems.BLAZE_PEPPER);
+            itemGroup.add(ModItems.BLAZE_PEPPER_CORE);
+            itemGroup.add(ModItems.PEPPER_POWDER);
         });
     }
 

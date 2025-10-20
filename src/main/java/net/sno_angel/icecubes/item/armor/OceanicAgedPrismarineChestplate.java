@@ -62,11 +62,6 @@ public class OceanicAgedPrismarineChestplate extends Item {
                 }
             }
         }
-        if(effectActive && slot != EquipmentSlot.CHEST) {
-            effectActive = false;
-            world.playSound(null, entity.getBlockPos(), SoundEvents.BLOCK_CONDUIT_DEACTIVATE, SoundCategory.PLAYERS);
-            ((LivingEntity) entity).removeStatusEffect(StatusEffects.CONDUIT_POWER);
-        }
     }
 
     @Override
