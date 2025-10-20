@@ -19,16 +19,22 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Rarity;
 import org.jetbrains.annotations.Nullable;
+import software.bernie.geckolib.animatable.GeoItem;
+import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.animatable.manager.AnimatableManager;
 
 import java.util.function.Consumer;
 
-public class StellarNetheriteChestplate extends Item {
+public class StellarNetheriteChestplate extends Item implements GeoItem {
 
     private boolean effectActive;
 
     public StellarNetheriteChestplate(Settings settings) {
         super(settings);
-        effectActive = false;
+    }
+
+    public boolean isEffectActive() {
+        return effectActive;
     }
 
     public static Item.Settings getSettings(){
@@ -84,4 +90,15 @@ public class StellarNetheriteChestplate extends Item {
     public void appendTooltip(ItemStack stack, TooltipContext context, TooltipDisplayComponent displayComponent, Consumer<Text> textConsumer, TooltipType type) {
         textConsumer.accept(Text.translatable("itemTooltip.icecubes.stellar_netherite_chestplate").formatted(Formatting.GRAY));
     }
+
+    @Override
+    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
+
+    }
+
+    @Override
+    public AnimatableInstanceCache getAnimatableInstanceCache() {
+        return null;
+    }
 }
+

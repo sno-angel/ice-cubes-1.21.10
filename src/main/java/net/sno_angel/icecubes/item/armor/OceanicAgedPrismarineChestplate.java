@@ -55,7 +55,7 @@ public class OceanicAgedPrismarineChestplate extends Item {
             }
             if(effectActive) {
                 world.spawnParticles(ParticleTypes.NAUTILUS, entity.getX(), entity.getY()+1, entity.getZ(),
-                        1, 0.25d, 0.25d, 0.25d, 0);
+                        1, 0.15d, 0.15d, 0.15d, 0);
                 if((!((LivingEntity)entity).hasStatusEffect(StatusEffects.CONDUIT_POWER))) {
                     world.playSound(null, entity.getBlockPos(), SoundEvents.BLOCK_CONDUIT_DEACTIVATE, SoundCategory.PLAYERS);
                     effectActive = false;
