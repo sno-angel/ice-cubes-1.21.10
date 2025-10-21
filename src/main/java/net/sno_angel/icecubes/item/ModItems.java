@@ -88,11 +88,11 @@ public class ModItems implements ModInitializer {
         return item;
     }
 
-    public static void initialize() {
+    public static void registerModItems() {
         // Register the group.
         Registry.register(Registries.ITEM_GROUP, CUSTOM_ITEM_GROUP_KEY, CUSTOM_ITEM_GROUP);
 
-    // Register items to the custom item group.
+        // Register items to the custom item group.
         ItemGroupEvents.modifyEntriesEvent(CUSTOM_ITEM_GROUP_KEY).register(itemGroup -> {
             itemGroup.add(ModItems.AGED_PRISMARINE_SHARD);
             itemGroup.add(ModItems.AGED_PRISMARINE_PLATE);
@@ -115,6 +115,10 @@ public class ModItems implements ModInitializer {
             itemGroup.add(ModItems.BLAZE_PEPPER_CORE);
             itemGroup.add(ModItems.PEPPER_POWDER);
         });
+    }
+
+    public static void initialize() {
+
     }
 
     @Override

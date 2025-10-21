@@ -3,6 +3,7 @@ package net.sno_angel.icecubes;
 import net.fabricmc.api.ModInitializer;
 
 import net.sno_angel.icecubes.item.ModItems;
+import net.sno_angel.icecubes.util.ModLootTableModifiers;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -21,6 +22,8 @@ public class IceCubes implements ModInitializer {
 		// Proceed with mild caution.
 
 		LOGGER.info("Ice Cubes ready to load.");
-        ModItems.initialize();
+
+        ModItems.registerModItems();
+        ModLootTableModifiers.modifyLootTables();
 	}
 }
