@@ -51,7 +51,7 @@ public class StellarNetheriteChestplate extends Item /*implements GeoItem*/ {
             if(entity.isOnFire()) {
                 ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED,
                         80, 1, false, false, true));
-                ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION,
+                ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH,
                         80, 0, false, false, false));
                 ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE,
                         80, 0, false, false, true));
@@ -69,7 +69,7 @@ public class StellarNetheriteChestplate extends Item /*implements GeoItem*/ {
                 world.spawnParticles(ParticleTypes.SMOKE, entity.getX(), entity.getY()+1, entity.getZ(),
                         2, 0.25d, 0.25d, 0.25d, 0);
                 if((!((LivingEntity)entity).hasStatusEffect(StatusEffects.SPEED) ||
-                        !((LivingEntity)entity).hasStatusEffect(StatusEffects.ABSORPTION) ||
+                        !((LivingEntity)entity).hasStatusEffect(StatusEffects.STRENGTH) ||
                         !((LivingEntity)entity).hasStatusEffect(StatusEffects.FIRE_RESISTANCE))) {
                     world.playSound(null, entity.getBlockPos(), SoundEvents.BLOCK_BEACON_DEACTIVATE, SoundCategory.PLAYERS);
                     effectActive = false;
