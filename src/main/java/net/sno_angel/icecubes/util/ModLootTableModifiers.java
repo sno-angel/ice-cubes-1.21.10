@@ -1,6 +1,7 @@
 package net.sno_angel.icecubes.util;
 
 import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
+import net.minecraft.item.Item;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTables;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
@@ -35,7 +36,16 @@ public class ModLootTableModifiers {
             }
         });
 
-        // TODO: figure out how to add AP Shards to both ruin chests and archaeology
+
+        // TODO: This doesn't work. Why?
+        LootTableEvents.MODIFY.register((key, tableBuilder, source, registry) -> {
+            if(LootTables.OCEAN_RUIN_COLD_ARCHAEOLOGY.equals(key)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .with(ItemEntry.builder(ModItems.AGED_PRISMARINE_SHARD))
+                        .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1F)).build());
+                tableBuilder.pool(poolBuilder.build());
+            }
+        });
 
         /*LootTableEvents.REPLACE.register((key, original, source, registries) -> {
             return original;
