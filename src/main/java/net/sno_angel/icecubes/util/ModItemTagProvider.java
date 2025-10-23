@@ -42,5 +42,6 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.AGED_PRISMARINE_BOOTS)
                 .add(ModItems.OCEANIC_AGED_PRISMARINE_CHESTPLATE)
                 .setReplace(true);
+        //
     }
 }
