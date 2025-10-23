@@ -3,7 +3,7 @@
 	"package": "net.sno_angel.icecubes.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+		"MixinItemEntity"
 	],
 	"injectors": {
 		"defaultRequire": 1
