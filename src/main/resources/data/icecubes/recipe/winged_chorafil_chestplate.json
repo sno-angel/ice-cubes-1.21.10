@@ -1,11 +1,9 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    "icecubes:chorafil_chestplate",
-    "minecraft:elytra"
-  ],
+  "type": "minecraft:smithing_transform",
+  "template": "minecraft:elytra",
+  "base": "icecubes:chorafil_chestplate",
+  "addition": "icecubes:crystallized_chorafil",
   "result": {
-    "id": "icecubes:winged_chorafil_chestplate",
-    "count": 1
+    "id": "icecubes:winged_chorafil_chestplate"
   }
 }

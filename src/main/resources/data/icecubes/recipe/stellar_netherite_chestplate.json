@@ -1,11 +1,9 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    "minecraft:netherite_chestplate",
-    "minecraft:nether_star"
-  ],
+  "type": "minecraft:smithing_transform",
+  "template": "minecraft:nether_star",
+  "base": "minecraft:netherite_chestplate",
+  "addition": "minecraft:netherite_ingot",
   "result": {
-    "id": "icecubes:stellar_netherite_chestplate",
-    "count": 1
+    "id": "icecubes:stellar_netherite_chestplate"
   }
 }
