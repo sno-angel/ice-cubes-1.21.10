@@ -1,0 +1,12 @@
+{
+  "replace": true,
+  "values": [
+    "icecubes:raw_chorafil",
+    "icecubes:crystallized_chorafil",
+    "icecubes:chorafil_helmet",
+    "icecubes:chorafil_chestplate",
+    "icecubes:chorafil_leggings",
+    "icecubes:chorafil_boots",
+    "icecubes:winged_chorafil_chestplate"
+  ]
+}

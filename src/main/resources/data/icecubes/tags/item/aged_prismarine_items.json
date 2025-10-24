@@ -1,0 +1,12 @@
+{
+  "replace": true,
+  "values": [
+    "icecubes:aged_prismarine_shard",
+    "icecubes:aged_prismarine_plate",
+    "icecubes:aged_prismarine_helmet",
+    "icecubes:aged_prismarine_chestplate",
+    "icecubes:aged_prismarine_leggings",
+    "icecubes:aged_prismarine_boots",
+    "icecubes:oceanic_aged_prismarine_chestplate"
+  ]
+}
