@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "icecubes:crystallized_chorafil",
+    "icecubes:crystallized_chorafil",
+    "icecubes:crystallized_chorafil",
+    "icecubes:crystallized_chorafil",
+    "icecubes:crystallized_chorafil",
+    "icecubes:crystallized_chorafil",
+    "icecubes:crystallized_chorafil",
+    "icecubes:crystallized_chorafil",
+    "icecubes:crystallized_chorafil"
+  ],
+  "result": {
+    "id": "icecubes:chorafil_block",
+    "count": 1
+  }
+}

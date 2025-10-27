@@ -18,6 +18,7 @@ import net.minecraft.util.Rarity;
 import net.sno_angel.icecubes.IceCubes;
 import net.sno_angel.icecubes.item.armor.*;
 import net.sno_angel.icecubes.item.food.BlazePepper;
+import net.sno_angel.icecubes.trim.ModTrimMaterials;
 
 import java.util.function.Function;
 
@@ -26,7 +27,7 @@ public class ModItems implements ModInitializer {
     // Item registries begin here
     // Aged Prismarine
     public static final Item AGED_PRISMARINE_SHARD = register("aged_prismarine_shard", Item::new, new Item.Settings());
-    public static final Item AGED_PRISMARINE_PLATE = register("aged_prismarine_plate", Item::new, new Item.Settings());
+    public static final Item AGED_PRISMARINE_PLATE = register("aged_prismarine_plate", Item::new, new Item.Settings().trimMaterial(ModTrimMaterials.AGED_PRISMARINE));
     public static final Item AGED_PRISMARINE_HELMET = register("aged_prismarine_helmet", Item::new, new Item.Settings().armor(ChorafilArmorMaterial.ARMOR_MATERIAL, EquipmentType.HELMET)
             .maxDamage(EquipmentType.HELMET.getMaxDamage(ChorafilArmorMaterial.BASE_DURABILITY)));
     public static final Item AGED_PRISMARINE_CHESTPLATE = register("aged_prismarine_chestplate", Item::new, new Item.Settings().armor(ChorafilArmorMaterial.ARMOR_MATERIAL, EquipmentType.CHESTPLATE)
@@ -38,7 +39,7 @@ public class ModItems implements ModInitializer {
 
     // Chorafil
     public static final Item RAW_CHORAFIL = register("raw_chorafil", Item::new, new Item.Settings());
-    public static final Item CRYSTALLIZED_CHORAFIL = register("crystallized_chorafil", Item::new, new Item.Settings());
+    public static final Item CRYSTALLIZED_CHORAFIL = register("crystallized_chorafil", Item::new, new Item.Settings().trimMaterial(ModTrimMaterials.CHORAFIL));
     public static final Item CHORAFIL_HELMET = register("chorafil_helmet", Item::new, new Item.Settings().armor(ChorafilArmorMaterial.ARMOR_MATERIAL, EquipmentType.HELMET)
             .maxDamage(EquipmentType.HELMET.getMaxDamage(ChorafilArmorMaterial.BASE_DURABILITY)));
     public static final Item CHORAFIL_CHESTPLATE = register("chorafil_chestplate", Item::new, new Item.Settings().armor(ChorafilArmorMaterial.ARMOR_MATERIAL, EquipmentType.CHESTPLATE)
@@ -117,12 +118,8 @@ public class ModItems implements ModInitializer {
         });
     }
 
-    public static void initialize() {
-
-    }
-
     @Override
     public void onInitialize() {
-
+        registerModItems();
     }
 }

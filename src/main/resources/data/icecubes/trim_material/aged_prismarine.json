@@ -1,0 +1,10 @@
+{
+  "asset_name": "aged_prismarine",
+  "description": {
+    "color": "#CFCCBE",
+    "translate": "trim_material.icecubes.aged_prismarine"
+  },
+  "override_armor_assets": {
+    "minecraft:copper": "aged_prismarine_darker"
+  }
+}

@@ -36,5 +36,11 @@
   "item.minecraft.smithing_template.aged_prismarine_upgrade.applies_to": "Leather Armor, Trident",
   "item.minecraft.smithing_template.aged_prismarine_upgrade.ingredients": "Aged Prismarine Plate",
   "item.minecraft.smithing_template.aged_prismarine_upgrade.base_slot_description": "Add leather armor or trident",
-  "item.minecraft.smithing_template.aged_prismarine_upgrade.additions_slot_description": "Add Aged Prismarine Plate"
+  "item.minecraft.smithing_template.aged_prismarine_upgrade.additions_slot_description": "Add Aged Prismarine Plate",
+
+  "trim_material.icecubes.aged_prismarine": "Aged Prismarine Material",
+  "trim_material.icecubes.chorafil": "Chorafil Material",
+
+  "block.icecubes.aged_prismarine_block": "Block of Aged Prismarine",
+  "block.icecubes.chorafil_block": "Block of Chorafil"
 }

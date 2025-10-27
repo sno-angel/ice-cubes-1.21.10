@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "icecubes:item/crystallized_chorafil"
+    "layer0": "icecubes:block/chorafil_bloom"
   }
 }

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "icecubes:aged_prismarine_plate",
+    "icecubes:aged_prismarine_plate",
+    "icecubes:aged_prismarine_plate",
+    "icecubes:aged_prismarine_plate",
+    "icecubes:aged_prismarine_plate",
+    "icecubes:aged_prismarine_plate",
+    "icecubes:aged_prismarine_plate",
+    "icecubes:aged_prismarine_plate",
+    "icecubes:aged_prismarine_plate"
+  ],
+  "result": {
+    "id": "icecubes:aged_prismarine_block",
+    "count": 1
+  }
+}

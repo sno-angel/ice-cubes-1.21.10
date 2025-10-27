@@ -49,12 +49,10 @@ public class StellarNetheriteChestplate extends Item /*implements GeoItem*/ {
         if (!(entity instanceof LivingEntity) || world.isClient()) return;
         if(slot == EquipmentSlot.CHEST) {
             if(entity.isOnFire()) {
-                ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED,
-                        80, 1, false, false, true));
-                ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH,
-                        80, 0, false, false, false));
-                ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE,
-                        80, 0, false, false, true));
+                ((LivingEntity)entity).addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED,
+                        30, 1, false, false, true));
+                ((LivingEntity)entity).addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH,
+                        30, 1, false, false, true));
                 if(!effectActive) {
                     world.playSound(null, entity.getBlockPos(), SoundEvents.BLOCK_BEACON_ACTIVATE, SoundCategory.PLAYERS);
                     world.spawnParticles(ParticleTypes.FLAME, entity.getX(), entity.getY()+1, entity.getZ(),
@@ -62,15 +60,13 @@ public class StellarNetheriteChestplate extends Item /*implements GeoItem*/ {
                     world.spawnParticles(ParticleTypes.SOUL_FIRE_FLAME, entity.getX(), entity.getY()+1, entity.getZ(),
                             24, 0d, 0d, 0d, Math.random() * 0.15);
                 }
-                entity.extinguish();
                 effectActive = true;
             }
             if(effectActive) {
-                world.spawnParticles(ParticleTypes.SMOKE, entity.getX(), entity.getY()+1, entity.getZ(),
-                        2, 0.25d, 0.25d, 0.25d, 0);
+                /* world.spawnParticles(ParticleTypes.SMOKE, entity.getX(), entity.getY()+1, entity.getZ(),
+                        2, 0.25d, 0.25d, 0.25d, 0); */
                 if((!((LivingEntity)entity).hasStatusEffect(StatusEffects.SPEED) ||
-                        !((LivingEntity)entity).hasStatusEffect(StatusEffects.STRENGTH) ||
-                        !((LivingEntity)entity).hasStatusEffect(StatusEffects.FIRE_RESISTANCE))) {
+                        !((LivingEntity)entity).hasStatusEffect(StatusEffects.STRENGTH))) {
                     world.playSound(null, entity.getBlockPos(), SoundEvents.BLOCK_BEACON_DEACTIVATE, SoundCategory.PLAYERS);
                     effectActive = false;
                 }

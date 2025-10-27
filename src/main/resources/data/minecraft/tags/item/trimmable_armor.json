@@ -1,13 +1,15 @@
 {
-  "replace": true,
   "values": [
-    "icecubes:aged_prismarine_shard",
-    "icecubes:aged_prismarine_plate",
+    "icecubes:stellar_netherite_chestplate",
     "icecubes:aged_prismarine_helmet",
     "icecubes:aged_prismarine_chestplate",
     "icecubes:aged_prismarine_leggings",
     "icecubes:aged_prismarine_boots",
     "icecubes:oceanic_aged_prismarine_chestplate",
-    "icecubes:aged_prismarine_block"
+    "icecubes:chorafil_helmet",
+    "icecubes:chorafil_chestplate",
+    "icecubes:chorafil_leggings",
+    "icecubes:chorafil_boots",
+    "icecubes:winged_chorafil_chestplate"
   ]
 }

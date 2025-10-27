@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "texture": "icecubes:block/chorafil_bloom"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "asset_name": "chorafil",
+  "description": {
+    "color": "#C52DC1",
+    "translate": "trim_material.icecubes.chorafil"
+  },
+  "override_armor_assets": {
+    "minecraft:copper": "chorafil_darker"
+  }
+}
