@@ -38,7 +38,7 @@ public class ModBlocks implements ModInitializer {
     public static final Block CHORAFIL_FLOWER = register("chorafil_flower", ChorafilFlowerBlock::new,
             AbstractBlock.Settings.create()
                     .sounds(BlockSoundGroup.FUNGUS)
-                    .strength(0.4F,0.4F)
+                    .strength(0.6F,0.6F)
                     .nonOpaque()
                     .mapColor(MapColor.MAGENTA),
             true);

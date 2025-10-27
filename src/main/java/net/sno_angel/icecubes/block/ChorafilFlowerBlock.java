@@ -2,7 +2,10 @@ package net.sno_angel.icecubes.block;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.block.*;
+import net.minecraft.entity.FallingBlockEntity;
 import net.minecraft.entity.projectile.ProjectileEntity;
+import net.minecraft.particle.ParticleTypes;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
@@ -16,6 +19,7 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
+import net.sno_angel.icecubes.IceCubes;
 
 public class ChorafilFlowerBlock extends Block {
     public static final MapCodec<ChorafilFlowerBlock> CODEC = createCodec(ChorafilFlowerBlock::new);
@@ -44,15 +48,15 @@ public class ChorafilFlowerBlock extends Block {
         BlockPos blockPos = pos.up();
         if (world.isAir(blockPos) && blockPos.getY() <= world.getTopYInclusive()) {
             int i = state.get(AGE);
-            boolean aboveEndStone = world.getBlockState(pos.down()).isOf(Blocks.END_STONE);
+            boolean aboveEndStone = canPlaceAt(state, world, pos);
             boolean aboveAir = world.getBlockState(pos.down()).isAir();
             if((i == 0 && aboveEndStone) || (i > 0 && i < MAX_AGE && aboveAir)) {
-                if(canRise(world, blockPos)) {
+                if(canRise(world, pos)) {
                     if(random.nextInt(10) == 0) {
                         if(i < 3)
                             grow(world, blockPos, i+1);
                         else
-                            mature(world, blockPos);
+                            mature(world, blockPos, random);
                     }
                 }
             }
@@ -65,27 +69,48 @@ public class ChorafilFlowerBlock extends Block {
         world.syncWorldEvent(1033, pos, 0); // TODO: make custom event for Chorafil Flower growth
     }
 
-    private void mature(World world, BlockPos pos) {
-        world.setBlockState(pos, this.getDefaultState().with(AGE, 4), 2);
+    private void mature(World world, BlockPos pos, Random random) {
+        world.setBlockState(pos, this.getDefaultState().with(AGE, MAX_AGE), 2);
         world.setBlockState(pos.down(), Blocks.AIR.getDefaultState());
+        for(Direction direction : DIRECTIONS) {
+            if (world.isAir(pos.offset(direction))) {
+                if(random.nextBoolean()) {
+                    world.setBlockState(pos.offset(direction), ModBlocks.CHORAFIL_BLOOM.getDefaultState().with(ChorafilBloomBlock.FACING,direction));
+                }
+            }
+        }
+        if(world instanceof ServerWorld) {
+            ((ServerWorld)world).spawnParticles(ParticleTypes.WHITE_SMOKE,
+                    pos.getX()+0.5, pos.getY()+0.5, pos.getZ()+0.5, 24,0, 0, 0,
+                    random.nextDouble() * 0.15);
+        }
+
         world.syncWorldEvent(1034, pos, 0);
     }
 
-    private static boolean canRise(WorldView world, BlockPos pos) {
-        if (!world.isAir(pos.up())) {
-            return false;
-        }
-        for(Direction direction : Direction.Type.HORIZONTAL) {
-            if (!world.isAir(pos.offset(direction))) {
-                return false;
+    public void checkIfAndDie(World world, BlockPos pos) {
+        boolean shouldDie = true;
+        for(Direction direction : DIRECTIONS) {
+            if(world.getBlockState(pos.offset(direction)).isOf(ModBlocks.CHORAFIL_BLOOM)) {
+                shouldDie = false;
             }
         }
+        if(shouldDie) {
+            FallingBlockEntity.spawnFromBlock(world, pos, world.getBlockState(pos));
+            world.syncWorldEvent(1034, pos, 0);
+        }
+    }
 
-        return true;
+    private static boolean canRise(WorldView world, BlockPos pos) {
+        return world.isAir(pos.up());
     }
 
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(new Property[]{AGE});
+    }
+
+    protected boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
+        return world.getBlockState(pos.down()).isOf(Blocks.END_STONE);
     }
 
     protected void onProjectileHit(World world, BlockState state, BlockHitResult hit, ProjectileEntity projectile) {

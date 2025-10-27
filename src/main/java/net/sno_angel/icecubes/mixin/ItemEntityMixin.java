@@ -82,9 +82,9 @@ public abstract class ItemEntityMixin extends Entity implements Ownable {
         }
     }
 
-    /* I'm well aware that this is a bad practice. However, this is a niche enough scenario
-    that's hard enough to implement through an EntityMixin that I don't really care. If it
-    ends up causing major compatibility issues, I *might* fix it, but it shouldn't.
+    /* I'm well aware that Overriding here is a bad practice. However, this is a niche enough
+    scenario that's hard enough to implement through an EntityMixin that I don't really care.
+    If it ends up causing major compatibility issues, I *might* fix it, but it shouldn't.
      */
     @Override
     protected void tickInVoid() {
