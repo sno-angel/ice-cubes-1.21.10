@@ -1,6 +1,21 @@
 {
   "variants": {
-    "": {
+    "age=0": {
+      "model": "icecubes:block/chorafil_lantern"
+    },
+    "age=1": {
+      "model": "icecubes:block/chorafil_bud"
+    },
+    "age=2": {
+      "model": "icecubes:block/chorafil_bud"
+    },
+    "age=3": {
+      "model": "icecubes:block/chorafil_bud"
+    },
+    "age=4": {
+      "model": "icecubes:block/chorafil_bud"
+    },
+    "age=5": {
       "model": "icecubes:block/chorafil_bud"
     }
   }

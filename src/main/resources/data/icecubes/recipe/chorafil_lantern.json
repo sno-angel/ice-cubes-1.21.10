@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "icecubes:chorafil_bud",
+    "minecraft:candle"
+  ],
+  "result": {
+    "id": "icecubes:chorafil_lantern",
+    "count": 1
+  }
+}

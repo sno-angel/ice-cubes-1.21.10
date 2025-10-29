@@ -40,7 +40,7 @@ public class ModBlocks implements ModInitializer {
                     .sounds(BlockSoundGroup.WOOD)
                     .strength(0.6F,0.6F)
                     .nonOpaque()
-                    .pistonBehavior(PistonBehavior.PUSH_ONLY)
+                    .pistonBehavior(PistonBehavior.DESTROY)
                     .mapColor(MapColor.MAGENTA),
             true);
 
@@ -53,6 +53,39 @@ public class ModBlocks implements ModInitializer {
                     .mapColor(MapColor.MAGENTA)
                     .pistonBehavior(PistonBehavior.DESTROY),
             true);
+    public static final Block CHORAFIL_LANTERN = register("chorafil_lantern", Block::new,
+            AbstractBlock.Settings.create()
+                    .sounds(BlockSoundGroup.TUFF)
+                    .strength(0.1F,0.1F)
+                    .nonOpaque()
+                    .luminance((state) -> 15)
+                    .mapColor(MapColor.MAGENTA),
+            true);
+    public static final Block GILDED_CHORAFIL_LANTERN = register("gilded_chorafil_lantern", Block::new,
+            AbstractBlock.Settings.create()
+                    .sounds(BlockSoundGroup.TUFF)
+                    .strength(0.1F,0.1F)
+                    .nonOpaque()
+                    .luminance((state) -> 15)
+                    .mapColor(MapColor.GOLD),
+            true);
+    public static final Block RED_GILDED_CHORAFIL_LANTERN = register("red_gilded_chorafil_lantern", Block::new, AbstractBlock.Settings.create().sounds(BlockSoundGroup.TUFF).strength(0.1F,0.1F).nonOpaque().luminance((state) -> 15).mapColor(MapColor.GOLD), true);
+    public static final Block ORANGE_GILDED_CHORAFIL_LANTERN = register("orange_gilded_chorafil_lantern", Block::new, AbstractBlock.Settings.create().sounds(BlockSoundGroup.TUFF).strength(0.1F,0.1F).nonOpaque().luminance((state) -> 15).mapColor(MapColor.GOLD), true);
+    public static final Block YELLOW_GILDED_CHORAFIL_LANTERN = register("yellow_gilded_chorafil_lantern", Block::new, AbstractBlock.Settings.create().sounds(BlockSoundGroup.TUFF).strength(0.1F,0.1F).nonOpaque().luminance((state) -> 15).mapColor(MapColor.GOLD), true);
+    public static final Block LIME_GILDED_CHORAFIL_LANTERN = register("lime_gilded_chorafil_lantern", Block::new, AbstractBlock.Settings.create().sounds(BlockSoundGroup.TUFF).strength(0.1F,0.1F).nonOpaque().luminance((state) -> 15).mapColor(MapColor.GOLD), true);
+    public static final Block GREEN_GILDED_CHORAFIL_LANTERN = register("green_gilded_chorafil_lantern", Block::new, AbstractBlock.Settings.create().sounds(BlockSoundGroup.TUFF).strength(0.1F,0.1F).nonOpaque().luminance((state) -> 15).mapColor(MapColor.GOLD), true);
+    public static final Block CYAN_GILDED_CHORAFIL_LANTERN = register("cyan_gilded_chorafil_lantern", Block::new, AbstractBlock.Settings.create().sounds(BlockSoundGroup.TUFF).strength(0.1F,0.1F).nonOpaque().luminance((state) -> 15).mapColor(MapColor.GOLD), true);
+    public static final Block LIGHT_BLUE_GILDED_CHORAFIL_LANTERN = register("light_blue_gilded_chorafil_lantern", Block::new, AbstractBlock.Settings.create().sounds(BlockSoundGroup.TUFF).strength(0.1F,0.1F).nonOpaque().luminance((state) -> 15).mapColor(MapColor.GOLD), true);
+    public static final Block BLUE_GILDED_CHORAFIL_LANTERN = register("blue_gilded_chorafil_lantern", Block::new, AbstractBlock.Settings.create().sounds(BlockSoundGroup.TUFF).strength(0.1F,0.1F).nonOpaque().luminance((state) -> 15).mapColor(MapColor.GOLD), true);
+    public static final Block PURPLE_GILDED_CHORAFIL_LANTERN = register("purple_gilded_chorafil_lantern", Block::new, AbstractBlock.Settings.create().sounds(BlockSoundGroup.TUFF).strength(0.1F,0.1F).nonOpaque().luminance((state) -> 15).mapColor(MapColor.GOLD), true);
+    public static final Block MAGENTA_GILDED_CHORAFIL_LANTERN = register("magenta_gilded_chorafil_lantern", Block::new, AbstractBlock.Settings.create().sounds(BlockSoundGroup.TUFF).strength(0.1F,0.1F).nonOpaque().luminance((state) -> 15).mapColor(MapColor.GOLD), true);
+    public static final Block PINK_GILDED_CHORAFIL_LANTERN = register("pink_gilded_chorafil_lantern", Block::new, AbstractBlock.Settings.create().sounds(BlockSoundGroup.TUFF).strength(0.1F,0.1F).nonOpaque().luminance((state) -> 15).mapColor(MapColor.GOLD), true);
+    public static final Block BROWN_GILDED_CHORAFIL_LANTERN = register("brown_gilded_chorafil_lantern", Block::new, AbstractBlock.Settings.create().sounds(BlockSoundGroup.TUFF).strength(0.1F,0.1F).nonOpaque().luminance((state) -> 15).mapColor(MapColor.GOLD), true);
+    public static final Block WHITE_GILDED_CHORAFIL_LANTERN = register("white_gilded_chorafil_lantern", Block::new, AbstractBlock.Settings.create().sounds(BlockSoundGroup.TUFF).strength(0.1F,0.1F).nonOpaque().luminance((state) -> 15).mapColor(MapColor.GOLD), true);
+    public static final Block LIGHT_GRAY_GILDED_CHORAFIL_LANTERN = register("light_gray_gilded_chorafil_lantern", Block::new, AbstractBlock.Settings.create().sounds(BlockSoundGroup.TUFF).strength(0.1F,0.1F).nonOpaque().luminance((state) -> 15).mapColor(MapColor.GOLD), true);
+    public static final Block GRAY_GILDED_CHORAFIL_LANTERN = register("gray_gilded_chorafil_lantern", Block::new, AbstractBlock.Settings.create().sounds(BlockSoundGroup.TUFF).strength(0.1F,0.1F).nonOpaque().luminance((state) -> 15).mapColor(MapColor.GOLD), true);
+    public static final Block BLACK_GILDED_CHORAFIL_LANTERN = register("black_gilded_chorafil_lantern", Block::new, AbstractBlock.Settings.create().sounds(BlockSoundGroup.TUFF).strength(0.1F,0.1F).nonOpaque().luminance((state) -> 15).mapColor(MapColor.GOLD), true);
+
 
     private static Block register(String name, Function<AbstractBlock.Settings, Block> blockFactory, AbstractBlock.Settings settings, boolean shouldRegisterItem) {
         // Create a registry key for the block
@@ -94,6 +127,24 @@ public class ModBlocks implements ModInitializer {
             itemGroup.add(ModBlocks.CHORAFIL_BLOCK.asItem());
             itemGroup.add(ModBlocks.CHORAFIL_BUD.asItem());
             itemGroup.add(ModBlocks.CHORAFIL_BLOOM.asItem());
+            itemGroup.add(ModBlocks.CHORAFIL_LANTERN.asItem());
+            itemGroup.add(ModBlocks.GILDED_CHORAFIL_LANTERN.asItem());
+            itemGroup.add(ModBlocks.RED_GILDED_CHORAFIL_LANTERN.asItem());
+            itemGroup.add(ModBlocks.ORANGE_GILDED_CHORAFIL_LANTERN.asItem());
+            itemGroup.add(ModBlocks.YELLOW_GILDED_CHORAFIL_LANTERN.asItem());
+            itemGroup.add(ModBlocks.LIME_GILDED_CHORAFIL_LANTERN.asItem());
+            itemGroup.add(ModBlocks.GREEN_GILDED_CHORAFIL_LANTERN.asItem());
+            itemGroup.add(ModBlocks.CYAN_GILDED_CHORAFIL_LANTERN.asItem());
+            itemGroup.add(ModBlocks.LIGHT_BLUE_GILDED_CHORAFIL_LANTERN.asItem());
+            itemGroup.add(ModBlocks.BLUE_GILDED_CHORAFIL_LANTERN.asItem());
+            itemGroup.add(ModBlocks.PURPLE_GILDED_CHORAFIL_LANTERN.asItem());
+            itemGroup.add(ModBlocks.MAGENTA_GILDED_CHORAFIL_LANTERN.asItem());
+            itemGroup.add(ModBlocks.PINK_GILDED_CHORAFIL_LANTERN.asItem());
+            itemGroup.add(ModBlocks.BROWN_GILDED_CHORAFIL_LANTERN.asItem());
+            itemGroup.add(ModBlocks.WHITE_GILDED_CHORAFIL_LANTERN.asItem());
+            itemGroup.add(ModBlocks.LIGHT_GRAY_GILDED_CHORAFIL_LANTERN.asItem());
+            itemGroup.add(ModBlocks.GRAY_GILDED_CHORAFIL_LANTERN.asItem());
+            itemGroup.add(ModBlocks.BLACK_GILDED_CHORAFIL_LANTERN.asItem());
         });
     }
 }

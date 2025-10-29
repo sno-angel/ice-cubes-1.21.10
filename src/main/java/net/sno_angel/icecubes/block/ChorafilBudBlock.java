@@ -23,7 +23,7 @@ import static net.sno_angel.icecubes.block.ChorafilBloomBlock.FACING;
 
 public class ChorafilBudBlock extends Block {
     public static final MapCodec<ChorafilBudBlock> CODEC = createCodec(ChorafilBudBlock::new);
-    public static final int MAX_AGE = 4;
+    public static final int MAX_AGE = 5;
     public static final IntProperty AGE;
     private static final VoxelShape SHAPE;
 
@@ -170,7 +170,7 @@ public class ChorafilBudBlock extends Block {
     }
 
     static {
-        AGE = Properties.AGE_4;
+        AGE = Properties.AGE_5;
         SHAPE = Block.createColumnShape(14.0, 0.0, 15.0);
     }
 }
