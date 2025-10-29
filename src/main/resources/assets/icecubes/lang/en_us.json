@@ -22,10 +22,11 @@
   "item.icecubes.blaze_pepper": "Blaze Pepper",
   "item.icecubes.blaze_pepper_core": "Blaze Pepper Core",
   "item.icecubes.pepper_powder": "Pepper Powder",
+  "item.icecubes.elder_effigy": "Elder Effigy",
 
 
   "itemTooltip.icecubes.stellar_netherite_chestplate": "Turn fire into speed and strength.",
-  "itemTooltip.icecubes.oceanic_aged_prismarine_chestplate": "Claim the powers of the sea.",
+  "itemTooltip.icecubes.oceanic_aged_prismarine_chestplate": "Claim the power of the sea.",
   "itemTooltip.icecubes.winged_chorafil_chestplate": "Achieve flight.",
 
   "item.minecraft.smithing_template.chorafil_upgrade.applies_to": "Chainmail Armor, Bow",
@@ -42,5 +43,7 @@
   "trim_material.icecubes.chorafil": "Chorafil Material",
 
   "block.icecubes.aged_prismarine_block": "Block of Aged Prismarine",
-  "block.icecubes.chorafil_block": "Block of Chorafil"
+  "block.icecubes.chorafil_block": "Block of Chorafil",
+  "block.icecubes.chorafil_bloom": "Chorafil Bloom",
+  "block.icecubes.chorafil_bud": "Chorafil Bud"
 }

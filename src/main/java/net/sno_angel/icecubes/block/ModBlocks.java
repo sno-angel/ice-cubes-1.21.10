@@ -35,11 +35,12 @@ public class ModBlocks implements ModInitializer {
                     .mapColor(MapColor.MAGENTA),
             true);
 
-    public static final Block CHORAFIL_FLOWER = register("chorafil_flower", ChorafilFlowerBlock::new,
+    public static final Block CHORAFIL_BUD = register("chorafil_bud", ChorafilBudBlock::new,
             AbstractBlock.Settings.create()
-                    .sounds(BlockSoundGroup.FUNGUS)
+                    .sounds(BlockSoundGroup.WOOD)
                     .strength(0.6F,0.6F)
                     .nonOpaque()
+                    .pistonBehavior(PistonBehavior.PUSH_ONLY)
                     .mapColor(MapColor.MAGENTA),
             true);
 
@@ -91,7 +92,7 @@ public class ModBlocks implements ModInitializer {
         ItemGroupEvents.modifyEntriesEvent(ModItems.CUSTOM_ITEM_GROUP_KEY).register((itemGroup) -> {
             itemGroup.add(ModBlocks.AGED_PRISMARINE_BLOCK.asItem());
             itemGroup.add(ModBlocks.CHORAFIL_BLOCK.asItem());
-            itemGroup.add(ModBlocks.CHORAFIL_FLOWER.asItem());
+            itemGroup.add(ModBlocks.CHORAFIL_BUD.asItem());
             itemGroup.add(ModBlocks.CHORAFIL_BLOOM.asItem());
         });
     }

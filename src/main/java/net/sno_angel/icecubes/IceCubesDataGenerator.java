@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.registry.RegistryBuilder;
 import net.minecraft.registry.RegistryKeys;
+import net.sno_angel.icecubes.datagen.ModBlockLootTableProvider;
 import net.sno_angel.icecubes.trim.ModTrimMaterials;
 
 public class IceCubesDataGenerator implements DataGeneratorEntrypoint {
@@ -12,6 +13,7 @@ public class IceCubesDataGenerator implements DataGeneratorEntrypoint {
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
         // pack.addProvider(ModItemTagProvider::new);
         //pack.addProvider(ModRegistryDataGenerator::new);
+        pack.addProvider(ModBlockLootTableProvider::new);
 	}
 
     @Override

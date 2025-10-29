@@ -42,13 +42,13 @@ public abstract class ItemEntityMixin extends Entity implements Ownable {
                         getVelocity().getY() + 0.01,getVelocity().getZ() * 0.55);
                 setNoGravity(true);
                 getEntityWorld().addParticleClient(ParticleTypes.PORTAL, false, false,
-                        this.getX(), this.getY()-0.35, this.getZ(), 0, 0, 0);
+                        this.getX(), this.getY()-0.5, this.getZ(), 0, 0, 0);
             }
             else if(y < bottom + 5) {
                 setVelocity(getVelocity().getX(),
                         getVelocity().getY() * 0.95, getVelocity().getZ());
                 getEntityWorld().addParticleClient(ParticleTypes.PORTAL, false, false,
-                        this.getX(), this.getY()-0.35, this.getZ(), 0, 0, 0);
+                        this.getX(), this.getY()-0.5, this.getZ(), 0, 0, 0);
             }
             else {
                 setNoGravity(false);

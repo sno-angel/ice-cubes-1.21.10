@@ -10,10 +10,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.item.tooltip.TooltipType;
-import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Rarity;
@@ -43,24 +40,10 @@ public class OceanicAgedPrismarineChestplate extends Item {
     public void inventoryTick(ItemStack stack, ServerWorld world, Entity entity, @Nullable EquipmentSlot slot) {
         if (!(entity instanceof LivingEntity) || world.isClient()) return;
         if(slot == EquipmentSlot.CHEST) {
-            if(entity.isTouchingWaterOrRain()) {
-                ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.CONDUIT_POWER,
-                        40, 0, false, false, true));
-                ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE,
-                        40, 0, false, false, true));
-                if(!effectActive) {
-                    world.playSound(null, entity.getBlockPos(), SoundEvents.BLOCK_CONDUIT_ACTIVATE, SoundCategory.PLAYERS);
-                    effectActive = true;
-                }
-            }
-            if(effectActive) {
-                world.spawnParticles(ParticleTypes.NAUTILUS, entity.getX(), entity.getY()+1, entity.getZ(),
-                        1, 0.15d, 0.15d, 0.15d, 0);
-                if((!((LivingEntity)entity).hasStatusEffect(StatusEffects.CONDUIT_POWER))) {
-                    world.playSound(null, entity.getBlockPos(), SoundEvents.BLOCK_CONDUIT_DEACTIVATE, SoundCategory.PLAYERS);
-                    effectActive = false;
-                }
-            }
+            ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.CONDUIT_POWER,
+                    200, 0, false, false, true));
+            ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE,
+                    200, 0, false, false, true));
         }
     }
 

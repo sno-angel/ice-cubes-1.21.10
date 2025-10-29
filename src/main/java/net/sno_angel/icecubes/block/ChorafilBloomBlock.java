@@ -2,9 +2,7 @@ package net.sno_angel.icecubes.block;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.block.*;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.EnumProperty;
 import net.minecraft.state.property.Properties;
@@ -13,10 +11,13 @@ import net.minecraft.util.BlockMirror;
 import net.minecraft.util.BlockRotation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldView;
+import net.minecraft.world.tick.ScheduledTickView;
 
 import java.util.Map;
 
@@ -29,7 +30,7 @@ public class ChorafilBloomBlock extends FacingBlock {
         super(settings);
         this.setDefaultState((this.stateManager.getDefaultState()).with(FACING, Direction.UP));
         this.shapesByDirection =
-                VoxelShapes.createFacingShapeMap(Block.createCuboidZShape(16.0, 6.0, 16.0));
+                VoxelShapes.createFacingShapeMap(Block.createCuboidZShape(8.0, 8.0, 16.0));
     }
 
     @Override
@@ -55,14 +56,22 @@ public class ChorafilBloomBlock extends FacingBlock {
         return blockState.isOf(this) && blockState.get(FACING) == direction ? this.getDefaultState().with(FACING, direction.getOpposite()) : (BlockState)this.getDefaultState().with(FACING, direction);
     }
 
+    protected boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
+        Direction direction = (Direction)state.get(FACING);
+        BlockPos blockPos = pos.offset(direction.getOpposite());
+        return world.getBlockState(blockPos).isSideSolidFullSquare(world, blockPos, direction);
+    }
+
     @Override
-    public BlockState onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
-        BlockPos basePos = pos.offset(state.get(FACING).getOpposite());
-        BlockState baseState = world.getBlockState(basePos);
-        if(baseState.isOf(ModBlocks.CHORAFIL_FLOWER)) {
-            ((ChorafilFlowerBlock)baseState.getBlock()).checkIfAndDie(world, basePos);
+    protected BlockState getStateForNeighborUpdate(BlockState state, WorldView world, ScheduledTickView tickView, BlockPos pos, Direction direction, BlockPos neighborPos, BlockState neighborState, Random random) {
+        if(direction.equals(state.get(FACING).getOpposite())) {
+            if(neighborState.isAir()) {
+                if(world instanceof World) {
+                    ((World)world).breakBlock(pos,true);
+                }
+            }
         }
-        return state;
+        return super.getStateForNeighborUpdate(state, world, tickView, pos, direction, neighborPos, neighborState, random);
     }
 
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {

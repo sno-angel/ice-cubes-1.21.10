@@ -68,6 +68,8 @@ public class ModItems implements ModInitializer {
     public static final Item BLAZE_PEPPER_CORE = register("blaze_pepper_core", Item::new, new Item.Settings());
     public static final Item PEPPER_POWDER = register("pepper_powder", Item::new, new Item.Settings());
 
+    public static final Item ELDER_EFFIGY = register("elder_effigy", Item::new, new Item.Settings().rarity(Rarity.UNCOMMON));
+
 
     // Don't touch this
     public static final RegistryKey<ItemGroup> CUSTOM_ITEM_GROUP_KEY = RegistryKey.of(Registries.ITEM_GROUP.getKey(), Identifier.of(IceCubes.MOD_ID, "item_group"));
@@ -115,6 +117,7 @@ public class ModItems implements ModInitializer {
             itemGroup.add(ModItems.BLAZE_PEPPER);
             itemGroup.add(ModItems.BLAZE_PEPPER_CORE);
             itemGroup.add(ModItems.PEPPER_POWDER);
+            itemGroup.add(ModItems.ELDER_EFFIGY);
         });
     }
 
