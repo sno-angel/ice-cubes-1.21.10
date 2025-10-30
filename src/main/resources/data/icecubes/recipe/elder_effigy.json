@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "FSG",
+    "###"
+  ],
+  "key": {
+    "#": "icecubes:aged_prismarine_shard",
+    "G": "minecraft:ghast_tear",
+    "S": "minecraft:sponge",
+    "F": "#minecraft:fishes"
+  },
+  "result": {
+    "id": "icecubes:elder_effigy",
+    "count": 1
+  }
+}

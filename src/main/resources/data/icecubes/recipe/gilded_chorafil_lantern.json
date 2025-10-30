@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    " C ",
+    "###"
+  ],
+  "key": {
+    "#": "minecraft:gold_nugget",
+    "C": "icecubes:chorafil_lantern"
+  },
+  "result": {
+    "id": "icecubes:gilded_chorafil_lantern",
+    "count": 1
+  }
+}

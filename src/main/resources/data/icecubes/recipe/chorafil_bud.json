@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "#G#",
+    " # "
+  ],
+  "key": {
+    "#": "minecraft:chorus_flower",
+    "G": "minecraft:ghast_tear"
+  },
+  "result": {
+    "id": "icecubes:chorafil_bud",
+    "count": 4
+  }
+}

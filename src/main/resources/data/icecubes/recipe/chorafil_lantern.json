@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     "icecubes:chorafil_bud",
-    "minecraft:candle"
+    "#minecraft:candles"
   ],
   "result": {
     "id": "icecubes:chorafil_lantern",

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "dyed_gilded_chorafil_lanterns",
+  "ingredients": [
+    "minecraft:lime_dye",
+    "#icecubes:gilded_chorafil_lanterns"
+  ],
+  "result": {
+    "id": "icecubes:lime_gilded_chorafil_lantern",
+    "count": 1
+  }
+}

@@ -1,7 +1,7 @@
 {
   "variants": {
     "age=0": {
-      "model": "icecubes:block/chorafil_lantern"
+      "model": "icecubes:block/chorafil_bud_unsprouted"
     },
     "age=1": {
       "model": "icecubes:block/chorafil_bud"

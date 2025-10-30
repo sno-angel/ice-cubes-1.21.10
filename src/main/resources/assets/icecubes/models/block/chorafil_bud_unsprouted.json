@@ -1,0 +1,7 @@
+{
+  "parent": "icecubes:block/chorafil_bud",
+  "textures": {
+    "0": "icecubes:block/chorafil_bud_unsprouted",
+    "particle": "icecubes:block/chorafil_bud_unsprouted"
+  }
+}

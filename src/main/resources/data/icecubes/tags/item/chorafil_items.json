@@ -1,5 +1,4 @@
 {
-  "replace": true,
   "values": [
     "icecubes:raw_chorafil",
     "icecubes:crystallized_chorafil",
@@ -10,6 +9,8 @@
     "icecubes:winged_chorafil_chestplate",
     "icecubes:chorafil_block",
     "icecubes:chorafil_bud",
-    "icecubes:chorafil_bloom"
+    "icecubes:chorafil_bloom",
+    "icecubes:chorafil_lantern",
+    "#icecubes:gilded_chorafil_lanterns"
   ]
 }
