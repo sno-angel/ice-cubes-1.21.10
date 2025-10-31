@@ -34,7 +34,7 @@ public class ModItems implements ModInitializer {
             .maxDamage(EquipmentType.CHESTPLATE.getMaxDamage(ChorafilArmorMaterial.BASE_DURABILITY)));
     public static final Item AGED_PRISMARINE_LEGGINGS = register("aged_prismarine_leggings", Item::new, new Item.Settings().armor(ChorafilArmorMaterial.ARMOR_MATERIAL, EquipmentType.LEGGINGS)
             .maxDamage(EquipmentType.LEGGINGS.getMaxDamage(ChorafilArmorMaterial.BASE_DURABILITY)));
-    public static final Item AGED_PRISMARINE_BOOTS = register("aged_prismarine_boots", Item::new, new Item.Settings().armor(ChorafilArmorMaterial.ARMOR_MATERIAL, EquipmentType.BOOTS)
+    public static final Item AGED_PRISMARINE_BOOTS = register("aged_prismarine_boots", AgedPrismarineBoots::new, new Item.Settings().armor(ChorafilArmorMaterial.ARMOR_MATERIAL, EquipmentType.BOOTS)
             .maxDamage(EquipmentType.BOOTS.getMaxDamage(ChorafilArmorMaterial.BASE_DURABILITY)));
 
     // Chorafil
@@ -68,7 +68,7 @@ public class ModItems implements ModInitializer {
     public static final Item BLAZE_PEPPER_CORE = register("blaze_pepper_core", Item::new, new Item.Settings());
     public static final Item PEPPER_POWDER = register("pepper_powder", Item::new, new Item.Settings());
 
-    public static final Item ELDER_EFFIGY = register("elder_effigy", Item::new, new Item.Settings().rarity(Rarity.UNCOMMON));
+    public static final Item ELDER_EFFIGY = register("elder_effigy", Item::new, new Item.Settings().rarity(Rarity.UNCOMMON).maxCount(1));
 
 
     // Don't touch this
