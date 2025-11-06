@@ -3,8 +3,9 @@
 	"package": "net.sno_angel.icecubes.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-      "ItemEntityMixin", "PowderSnowBlockMixin", "LivingEntityMixin"
+      "ItemEntityMixin", "PowderSnowBlockMixin", "EntityAttributesMixin"
 	],
+    "mixinextras": {"minVersion": "0.5.0"},
 	"injectors": {
 		"defaultRequire": 1
 	},

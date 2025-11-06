@@ -22,6 +22,7 @@ import net.minecraft.util.Rarity;
 import net.sno_angel.icecubes.IceCubes;
 import net.sno_angel.icecubes.item.armor.*;
 import net.sno_angel.icecubes.item.food.BlazePepper;
+import net.sno_angel.icecubes.item.weapon.ChorafilCrossbowItem;
 import net.sno_angel.icecubes.trim.ModTrimMaterials;
 
 import java.util.function.Function;
@@ -42,7 +43,7 @@ public class ModItems implements ModInitializer {
             .maxDamage(EquipmentType.BOOTS.getMaxDamage(ChorafilArmorMaterial.BASE_DURABILITY))
             .attributeModifiers(AttributeModifiersComponent.builder().add(EntityAttributes.WATER_MOVEMENT_EFFICIENCY,
                     new EntityAttributeModifier(Identifier.of("icecubes",
-                            "armor.aged_prismarine_boots"), 1,
+                            "armor.aged_prismarine_boots"), 0.5,
                             EntityAttributeModifier.Operation.ADD_VALUE),
                     AttributeModifierSlot.FEET).build()));
 
@@ -57,6 +58,7 @@ public class ModItems implements ModInitializer {
             .maxDamage(EquipmentType.LEGGINGS.getMaxDamage(ChorafilArmorMaterial.BASE_DURABILITY)));
     public static final Item CHORAFIL_BOOTS = register("chorafil_boots", Item::new, new Item.Settings().armor(ChorafilArmorMaterial.ARMOR_MATERIAL, EquipmentType.BOOTS)
             .maxDamage(EquipmentType.BOOTS.getMaxDamage(ChorafilArmorMaterial.BASE_DURABILITY)));
+    public static final Item CHORAFIL_CROSSBOW = register("chorafil_crossbow", ChorafilCrossbowItem::new, ChorafilCrossbowItem.getSettings());
 
     // Upgraded Chestplates
     public static final Item OCEANIC_AGED_PRISMARINE_CHESTPLATE = register("oceanic_aged_prismarine_chestplate",
@@ -120,6 +122,7 @@ public class ModItems implements ModInitializer {
             itemGroup.add(ModItems.CHORAFIL_BOOTS);
             itemGroup.add(ModItems.OCEANIC_AGED_PRISMARINE_CHESTPLATE);
             itemGroup.add(ModItems.WINGED_CHORAFIL_CHESTPLATE);
+            itemGroup.add(ModItems.CHORAFIL_CROSSBOW);
             itemGroup.add(ModItems.STELLAR_NETHERITE_CHESTPLATE);
             itemGroup.add(ModItems.AGED_PRISMARINE_UPGRADE_SMITHING_TEMPLATE);
             itemGroup.add(ModItems.CHORAFIL_UPGRADE_SMITHING_TEMPLATE);

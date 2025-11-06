@@ -32,6 +32,8 @@ public abstract class ItemEntityMixin extends Entity implements Ownable {
     @Shadow
     private int pickupDelay;
 
+    // It would probably be more performance-friendly to do this by converting the item into a ChorafilItemEntity on spawn
+    // However, I tried that and decided it was too annoying to implement.
     @Inject(at = @At("TAIL"), method = "tick")
     public void tick(CallbackInfo ci) {
         if(getStack().isIn(ModItemTags.CHORAFIL_ITEMS)) {
@@ -82,6 +84,8 @@ public abstract class ItemEntityMixin extends Entity implements Ownable {
         }
     }
 
+
+    // TODO: Replace this with a @WrapMethod in EntityMixin
     /* I'm well aware that Overriding here is a bad practice. However, this is a niche enough
     scenario that's hard enough to implement through an EntityMixin that I don't really care.
     If it ends up causing major compatibility issues, I *might* fix it, but it shouldn't.
