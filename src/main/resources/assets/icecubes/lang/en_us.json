@@ -7,13 +7,14 @@
   "item.icecubes.aged_prismarine_helmet": "Aged Prismarine Helmet",
   "item.icecubes.aged_prismarine_chestplate": "Aged Prismarine Chestplate",
   "item.icecubes.aged_prismarine_leggings": "Aged Prismarine Leggings",
-  "item.icecubes.aged_prismarine_boots": "Aged Prismarine Flippers",
+  "item.icecubes.aged_prismarine_boots": "Aged Prismarine Boots",
   "item.icecubes.raw_chorafil": "Raw Chorafil",
   "item.icecubes.crystallized_chorafil": "Crystallized Chorafil",
   "item.icecubes.chorafil_helmet": "Chorafil Helmet",
   "item.icecubes.chorafil_chestplate": "Chorafil Chestplate",
   "item.icecubes.chorafil_leggings": "Chorafil Leggings",
   "item.icecubes.chorafil_boots": "Chorafil Boots",
+  "item.icecubes.chorafil_crossbow": "Chorafil Crossbow",
   "item.icecubes.stellar_netherite_chestplate": "Stellar Netherite Chestplate",
   "item.icecubes.oceanic_aged_prismarine_chestplate": "Oceanic Aged Prismarine Chestplate",
   "item.icecubes.winged_chorafil_chestplate": "Winged Chorafil Chestplate",
@@ -29,9 +30,9 @@
   "itemTooltip.icecubes.oceanic_aged_prismarine_chestplate": "Claim the power of the sea.",
   "itemTooltip.icecubes.winged_chorafil_chestplate": "Achieve flight.",
 
-  "item.minecraft.smithing_template.chorafil_upgrade.applies_to": "Chainmail Armor, Bow",
+  "item.minecraft.smithing_template.chorafil_upgrade.applies_to": "Chainmail Armor, Crossbow",
   "item.minecraft.smithing_template.chorafil_upgrade.ingredients": "Crystallized Chorafil",
-  "item.minecraft.smithing_template.chorafil_upgrade.base_slot_description": "Add chainmail armor or bow",
+  "item.minecraft.smithing_template.chorafil_upgrade.base_slot_description": "Add chainmail armor or crossbow",
   "item.minecraft.smithing_template.chorafil_upgrade.additions_slot_description": "Add Crystallized Chorafil",
 
   "item.minecraft.smithing_template.aged_prismarine_upgrade.applies_to": "Leather Armor, Trident",
@@ -47,5 +48,20 @@
   "block.icecubes.chorafil_bloom": "Chorafil Bloom",
   "block.icecubes.chorafil_bud": "Chorafil Bud",
   "block.icecubes.chorafil_lantern": "Chorafil Lantern",
-  "block.icecubes.red_chorafil_lantern": "Red Chorafil Lantern"
+  "block.icecubes.red_chorafil_lantern": "Red Chorafil Lantern",
+
+  "item.minecraft.potion.effect.levitation": "Potion of Levitation",
+  "item.minecraft.splash_potion.effect.levitation": "Splash Potion of Levitation",
+  "item.minecraft.lingering_potion.effect.levitation": "Lingering Potion of Levitation",
+  "item.minecraft.tipped_arrow.effect.levitation": "Arrow of Levitation",
+
+  "item.minecraft.potion.effect.mining_fatigue": "Potion of Mining Fatigue",
+  "item.minecraft.splash_potion.effect.mining_fatigue": "Splash Potion of Mining Fatigue",
+  "item.minecraft.lingering_potion.effect.mining_fatigue": "Lingering Potion of Mining Fatigue",
+  "item.minecraft.tipped_arrow.effect.mining_fatigue": "Arrow of Mining Fatigue",
+
+  "item.minecraft.potion.effect.haste": "Potion of Haste",
+  "item.minecraft.splash_potion.effect.haste": "Splash Potion of Haste",
+  "item.minecraft.lingering_potion.effect.haste": "Lingering Potion of Haste",
+  "item.minecraft.tipped_arrow.effect.haste": "Arrow of Haste"
 }
