@@ -1,6 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "icecubes:item/stellar_netherite_chestplate"
+    "layer0": "icecubes:item/stellar_netherite_chestplate",
+    "layer1": "minecraft:item/netherite_chestplate"
   }
 }

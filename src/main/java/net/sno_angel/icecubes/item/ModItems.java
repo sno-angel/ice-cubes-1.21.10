@@ -34,16 +34,28 @@ public class ModItems implements ModInitializer {
     public static final Item AGED_PRISMARINE_SHARD = register("aged_prismarine_shard", Item::new, new Item.Settings());
     public static final Item AGED_PRISMARINE_PLATE = register("aged_prismarine_plate", Item::new, new Item.Settings().trimMaterial(ModTrimMaterials.AGED_PRISMARINE));
     public static final Item AGED_PRISMARINE_HELMET = register("aged_prismarine_helmet", Item::new, new Item.Settings().armor(ChorafilArmorMaterial.ARMOR_MATERIAL, EquipmentType.HELMET)
-            .maxDamage(EquipmentType.HELMET.getMaxDamage(ChorafilArmorMaterial.BASE_DURABILITY)));
+            .maxDamage(EquipmentType.HELMET.getMaxDamage(ChorafilArmorMaterial.BASE_DURABILITY)).attributeModifiers(AttributeModifiersComponent.builder().add(EntityAttributes.WATER_MOVEMENT_EFFICIENCY,
+                    new EntityAttributeModifier(Identifier.of("icecubes",
+                            "armor.aged_prismarine_helmet"), 0.25,
+                            EntityAttributeModifier.Operation.ADD_VALUE),
+                    AttributeModifierSlot.HEAD).build()));
     public static final Item AGED_PRISMARINE_CHESTPLATE = register("aged_prismarine_chestplate", Item::new, new Item.Settings().armor(ChorafilArmorMaterial.ARMOR_MATERIAL, EquipmentType.CHESTPLATE)
-            .maxDamage(EquipmentType.CHESTPLATE.getMaxDamage(ChorafilArmorMaterial.BASE_DURABILITY)));
+            .maxDamage(EquipmentType.CHESTPLATE.getMaxDamage(ChorafilArmorMaterial.BASE_DURABILITY)).attributeModifiers(AttributeModifiersComponent.builder().add(EntityAttributes.WATER_MOVEMENT_EFFICIENCY,
+                    new EntityAttributeModifier(Identifier.of("icecubes",
+                            "armor.aged_prismarine_chestplate"), 0.25,
+                            EntityAttributeModifier.Operation.ADD_VALUE),
+                    AttributeModifierSlot.CHEST).build()));
     public static final Item AGED_PRISMARINE_LEGGINGS = register("aged_prismarine_leggings", Item::new, new Item.Settings().armor(ChorafilArmorMaterial.ARMOR_MATERIAL, EquipmentType.LEGGINGS)
-            .maxDamage(EquipmentType.LEGGINGS.getMaxDamage(ChorafilArmorMaterial.BASE_DURABILITY)));
+            .maxDamage(EquipmentType.LEGGINGS.getMaxDamage(ChorafilArmorMaterial.BASE_DURABILITY)).attributeModifiers(AttributeModifiersComponent.builder().add(EntityAttributes.WATER_MOVEMENT_EFFICIENCY,
+                    new EntityAttributeModifier(Identifier.of("icecubes",
+                            "armor.aged_prismarine_leggings"), 0.25,
+                            EntityAttributeModifier.Operation.ADD_VALUE),
+                    AttributeModifierSlot.LEGS).build()));
     public static final Item AGED_PRISMARINE_BOOTS = register("aged_prismarine_boots", Item::new, new Item.Settings().armor(ChorafilArmorMaterial.ARMOR_MATERIAL, EquipmentType.BOOTS)
             .maxDamage(EquipmentType.BOOTS.getMaxDamage(ChorafilArmorMaterial.BASE_DURABILITY))
             .attributeModifiers(AttributeModifiersComponent.builder().add(EntityAttributes.WATER_MOVEMENT_EFFICIENCY,
                     new EntityAttributeModifier(Identifier.of("icecubes",
-                            "armor.aged_prismarine_boots"), 0.5,
+                            "armor.aged_prismarine_boots"), 0.25,
                             EntityAttributeModifier.Operation.ADD_VALUE),
                     AttributeModifierSlot.FEET).build()));
 

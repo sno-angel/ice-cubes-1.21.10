@@ -16,8 +16,8 @@ import net.minecraft.world.World;
 import net.sno_angel.icecubes.item.armor.ChorafilArmorMaterial;
 
 public class ChorafilCrossbowItem extends CrossbowItem {
-    private static final float DEFAULT_SPEED = 4.15F;
-    private static final float FIREWORK_ROCKET_SPEED = 1.6F;
+    private static final float DEFAULT_SPEED = 4.85F;
+    private static final float FIREWORK_ROCKET_SPEED = 2.4F;
 
     public ChorafilCrossbowItem(Settings settings) {
         super(settings);

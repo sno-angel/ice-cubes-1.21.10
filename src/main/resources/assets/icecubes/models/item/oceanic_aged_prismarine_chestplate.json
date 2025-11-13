@@ -1,6 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "icecubes:item/placeholder_item"
+    "layer0": "icecubes:item/aged_prismarine_chestplate",
+    "layer1": "icecubes:item/oceanic_aged_prismarine_chestplate"
   }
 }
