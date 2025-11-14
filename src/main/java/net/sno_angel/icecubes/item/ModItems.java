@@ -24,6 +24,7 @@ import net.minecraft.util.Rarity;
 import net.sno_angel.icecubes.IceCubes;
 import net.sno_angel.icecubes.item.armor.*;
 import net.sno_angel.icecubes.item.food.BlazePepper;
+import net.sno_angel.icecubes.item.misc.BlazebombItem;
 import net.sno_angel.icecubes.item.weapon.ChorafilCrossbowItem;
 import net.sno_angel.icecubes.trim.ModTrimMaterials;
 
@@ -123,6 +124,7 @@ public class ModItems implements ModInitializer {
     public static final Item BLAZE_PEPPER = register("blaze_pepper", BlazePepper::new, BlazePepper.getSettings());
     public static final Item BLAZE_PEPPER_CORE = register("blaze_pepper_core", Item::new, new Item.Settings());
     public static final Item PEPPER_POWDER = register("pepper_powder", Item::new, new Item.Settings());
+    public static final Item BLAZEBOMB = register("blazebomb", BlazebombItem::new, new Item.Settings());
 
     public static final Item ELDER_EFFIGY = register("elder_effigy", Item::new, new Item.Settings().rarity(Rarity.UNCOMMON).maxCount(1));
 
