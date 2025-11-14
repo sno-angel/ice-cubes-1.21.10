@@ -23,7 +23,7 @@ import static net.sno_angel.icecubes.block.ChorafilBloomBlock.FACING;
 
 public class ChorafilBudBlock extends Block {
     public static final MapCodec<ChorafilBudBlock> CODEC = createCodec(ChorafilBudBlock::new);
-    public static final int MAX_AGE = 5;
+    public static final int MAX_AGE = 7;
     public static final IntProperty AGE;
     private static final VoxelShape SHAPE;
 
@@ -52,7 +52,7 @@ public class ChorafilBudBlock extends Block {
             if((i == 0 && aboveEndStone) || (i > 0 && i < MAX_AGE && isFloating(world, pos))) {
                 if(canRise(world, pos)) {
                     if(random.nextInt(10) == 0) {
-                        if(i < 3)
+                        if(i < MAX_AGE - 1)
                             grow(world, blockPos, i+1);
                         else
                             mature(world, blockPos, random);
@@ -65,7 +65,7 @@ public class ChorafilBudBlock extends Block {
     @Override
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
         if(isFloating(world, pos)) {
-            for(int i = 0; i <= state.get(AGE); ++i) {
+            for(int i = 0; i <= state.get(AGE) / 2; ++i) {
                 double particleX = pos.getX() + random.nextDouble();
                 double particleZ = pos.getZ() + random.nextDouble();
                 world.addParticleClient(ParticleTypes.REVERSE_PORTAL, false, false,
@@ -170,7 +170,7 @@ public class ChorafilBudBlock extends Block {
     }
 
     static {
-        AGE = Properties.AGE_5;
+        AGE = Properties.AGE_7;
         SHAPE = Block.createColumnShape(14.0, 0.0, 15.0);
     }
 }

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "icecubes:raw_chorafil",
+    "icecubes:raw_chorafil",
+    "icecubes:raw_chorafil"
+  ],
+  "result": {
+    "id": "icecubes:chorafil_bloom",
+    "count": 1
+  }
+}

@@ -19,7 +19,7 @@ import net.sno_angel.icecubes.IceCubes;
 import java.util.List;
 import java.util.Map;
 
-public class ChorafilArmorMaterial {
+public class ChorafilArmorMaterial{
     public static final int BASE_DURABILITY = 30;
 
     public static final RegistryKey<EquipmentAsset> CHORAFIL_ARMOR_MATERIAL_KEY = RegistryKey.of(EquipmentAssetKeys.REGISTRY_KEY, Identifier.of(IceCubes.MOD_ID, "chorafil"));
@@ -68,9 +68,9 @@ public class ChorafilArmorMaterial {
                         Identifier.ofVanilla("container/slot/helmet"),
                         Identifier.ofVanilla("container/slot/chestplate"),
                         Identifier.ofVanilla("container/slot/leggings"),
-                        Identifier.ofVanilla("container/slot/boots") // TODO: Add Bow to this
+                        Identifier.ofVanilla("container/slot/boots") // TODO: Add Crossbow to this
                 ),
-                List.of(Identifier.ofVanilla("container/slot/ingot")), // TODO: Replace this with Crystallized Chorafil once designed
+                List.of(Identifier.ofVanilla("container/slot/ingot")), // TODO: Replace this with Crystallized Chorafil
                 settings
         );
     }

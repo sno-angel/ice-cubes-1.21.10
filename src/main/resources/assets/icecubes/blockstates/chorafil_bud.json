@@ -17,6 +17,12 @@
     },
     "age=5": {
       "model": "icecubes:block/chorafil_bud"
+    },
+    "age=6": {
+      "model": "icecubes:block/chorafil_bud"
+    },
+    "age=7": {
+      "model": "icecubes:block/chorafil_bud"
     }
   }
 }

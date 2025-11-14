@@ -59,7 +59,10 @@ public class ChorafilBloomBlock extends FacingBlock {
     protected boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
         Direction direction = (Direction)state.get(FACING);
         BlockPos blockPos = pos.offset(direction.getOpposite());
-        return world.getBlockState(blockPos).isSideSolidFullSquare(world, blockPos, direction);
+        return world.getBlockState(blockPos).isSideSolidFullSquare(world, blockPos, direction)
+            || (world.getBlockState(blockPos).isOf(Blocks.END_ROD)
+                && world.getBlockState(blockPos).get(FACING) == direction
+                || world.getBlockState(blockPos).get(FACING) == direction.getOpposite());
     }
 
     @Override

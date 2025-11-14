@@ -26,9 +26,9 @@
   "item.icecubes.elder_effigy": "Elder Effigy",
 
 
-  "itemTooltip.icecubes.stellar_netherite_chestplate": "Turn fire into speed and strength.",
-  "itemTooltip.icecubes.oceanic_aged_prismarine_chestplate": "Claim the power of the sea.",
-  "itemTooltip.icecubes.winged_chorafil_chestplate": "Achieve flight.",
+  "item.icecubes.stellar_netherite_chestplate.tooltip": "Turn fire into speed and strength.",
+  "item.icecubes.oceanic_aged_prismarine_chestplate.tooltip": "Claim the power of the sea.",
+  "item.icecubes.winged_chorafil_chestplate.tooltip": "Achieve flight.",
 
   "item.minecraft.smithing_template.chorafil_upgrade.applies_to": "Chainmail Armor, Crossbow",
   "item.minecraft.smithing_template.chorafil_upgrade.ingredients": "Crystallized Chorafil",

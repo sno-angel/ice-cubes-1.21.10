@@ -69,9 +69,9 @@ public class AgedPrismarineArmorMaterial {
                         Identifier.ofVanilla("container/slot/helmet"),
                         Identifier.ofVanilla("container/slot/chestplate"),
                         Identifier.ofVanilla("container/slot/leggings"),
-                        Identifier.ofVanilla("container/slot/boots") // TODO: Add Trident to this
+                        Identifier.ofVanilla("container/slot/boots") // TODO: Add Trident and Harpoon to this
                 ),
-                List.of(Identifier.ofVanilla("container/slot/ingot")), // TODO: Replace this with Aged Prismarine Plate once designed
+                List.of(Identifier.ofVanilla("container/slot/ingot")), // TODO: Replace this with Aged Prismarine Plate
                 settings
         );
     }

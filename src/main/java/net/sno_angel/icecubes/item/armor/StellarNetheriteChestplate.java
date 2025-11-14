@@ -1,6 +1,5 @@
 package net.sno_angel.icecubes.item.armor;
 
-import net.minecraft.component.type.TooltipDisplayComponent;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
@@ -10,16 +9,12 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.equipment.ArmorMaterials;
 import net.minecraft.item.equipment.EquipmentType;
-import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.text.Text;
-import net.minecraft.util.Formatting;
 import net.minecraft.util.Rarity;
 import org.jetbrains.annotations.Nullable;
-import java.util.function.Consumer;
 
 public class StellarNetheriteChestplate extends Item /*implements GeoItem*/ {
 
@@ -34,14 +29,13 @@ public class StellarNetheriteChestplate extends Item /*implements GeoItem*/ {
     }
 
     public static Item.Settings getSettings(){
-        Item.Settings settings = new Item.Settings();
-        settings.armor(ArmorMaterials.NETHERITE, EquipmentType.CHESTPLATE)
-                .maxDamage(EquipmentType.CHESTPLATE.getMaxDamage(ArmorMaterials.NETHERITE.durability()));
-        settings.rarity(Rarity.RARE);
-        settings.fireproof();
-        settings.enchantable(13);
-        settings.repairable(ArmorMaterials.NETHERITE.repairIngredient());
-        return settings;
+        return new Item.Settings()
+            .armor(ArmorMaterials.NETHERITE, EquipmentType.CHESTPLATE)
+                .maxDamage(EquipmentType.CHESTPLATE.getMaxDamage(ArmorMaterials.NETHERITE.durability()))
+            .rarity(Rarity.RARE)
+            .fireproof()
+            .enchantable(13)
+            .repairable(ArmorMaterials.NETHERITE.repairIngredient());
     }
 
     @Override
@@ -73,21 +67,5 @@ public class StellarNetheriteChestplate extends Item /*implements GeoItem*/ {
             }
         }
     }
-
-    @Override
-    public void appendTooltip(ItemStack stack, TooltipContext context, TooltipDisplayComponent displayComponent, Consumer<Text> textConsumer, TooltipType type) {
-        textConsumer.accept(Text.translatable("itemTooltip.icecubes.stellar_netherite_chestplate").formatted(Formatting.GRAY));
-    }
-/*
-    @Override
-    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-
-    }
-
-    @Override
-    public AnimatableInstanceCache getAnimatableInstanceCache() {
-        return null;
-    }
- */
 }
 
