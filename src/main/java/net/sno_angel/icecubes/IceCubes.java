@@ -3,6 +3,7 @@ package net.sno_angel.icecubes;
 import net.fabricmc.api.ModInitializer;
 
 import net.sno_angel.icecubes.block.ModBlocks;
+import net.sno_angel.icecubes.entity.ModEntityTypes;
 import net.sno_angel.icecubes.item.ModItems;
 import net.sno_angel.icecubes.item.misc.ModPotions;
 import net.sno_angel.icecubes.util.ModLootTableModifiers;
@@ -27,6 +28,7 @@ public class IceCubes implements ModInitializer {
 
         ModItems.registerModItems();
         ModBlocks.setupItemGroups();
+        ModEntityTypes.initialize();
         ModPotions.registerModPotionRecipes();
         ModLootTableModifiers.modifyLootTables();
 	}

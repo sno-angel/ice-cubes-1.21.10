@@ -178,6 +178,7 @@ public class ModItems implements ModInitializer {
             itemGroup.add(ModItems.CHORAFIL_UPGRADE_SMITHING_TEMPLATE);
             itemGroup.add(ModItems.BLAZE_PEPPER);
             itemGroup.add(ModItems.BLAZE_PEPPER_CORE);
+            itemGroup.add(ModItems.BLAZEBOMB);
             itemGroup.add(ModItems.PEPPER_POWDER);
             itemGroup.add(ModItems.ELDER_EFFIGY);
         });

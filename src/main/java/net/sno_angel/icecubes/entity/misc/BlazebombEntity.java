@@ -28,14 +28,22 @@ public class BlazebombEntity extends PotionEntity {
     public BlazebombEntity(EntityType<? extends PotionEntity> entityType, World world) {
         super(entityType, world);
     }
-/*
-    public BlazebombEntity(World world, LivingEntity owner, ItemStack stack) {
-        super(ModEntityTypes.BLAZEBOMB, world, owner, stack);
+
+    private BlazebombEntity(ServerWorld world, LivingEntity user, ItemStack stack) {
+        super(ModEntityTypes.BLAZEBOMB, world, user, stack);
     }
 
-    public BlazebombEntity(World world, double x, double y, double z, ItemStack stack) {
+    private BlazebombEntity(World world, double x, double y, double z, ItemStack stack) {
         super(ModEntityTypes.BLAZEBOMB, world, x, y, z, stack);
-    } */
+    }
+
+    public static BlazebombEntity spawnFromUser(ServerWorld world, LivingEntity user, ItemStack stack) {
+        return new BlazebombEntity(world, user, stack);
+    }
+
+    public static BlazebombEntity spawnFromPos(World world, double x, double y, double z, ItemStack stack) {
+        return new BlazebombEntity(world, x, y, z, stack);
+    }
 
     @Override
     protected void onBlockHit(BlockHitResult blockHitResult) {
